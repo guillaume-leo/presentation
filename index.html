@@ -17,10 +17,44 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					Slide 1
-					<img src="/examples/assets/image1.png" alt="">
+					<h1>sharing the website www.rgb124.be</h1>
+					<ul>
+						<li class="fragment">So this is the website I was working on recently, and I think is one of the most advanced personnal project I've made with web technologies at the moment</li>
+						<li class="fragment">You have to know that this project is under construction, really optimized for phone and not official at the moment, so I encourage you to see it on a window that have more or less the size of a phone</li>
+					</ul>
 				</section>
-				<section>Slide 2</section>
+
+				<section>
+					<h1>a bit of context</h1>
+					<ul>
+						<li class="fragment">Alex GD is a video creator, he asked me in october to create a website to present his work.</li>
+						<li class="fragment">He had a really specific idea about how the website should look and he have a really specific artistic direction so we decided that he will create all the design, and I will build the website</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Technologies</h1>
+					<ul>
+						<li class="fragment">As the website is completely about video content, we decided to do it on a vimeo pro account, to be able to access the video url directly and create our own custom video player, which is actually really minimalistic.</li>
+
+						<li class="fragment">I decided to use NuxtJs, first of all because I wanted to explore the framework and I really enjoy working with vue, but also because I have the feeling that if one day the project go further than just a quasi static website, then nuxt will be perfect for that</li>
+
+						<li class="fragment">As he wanted to be able to update some part of the website himself, I decided to connect a googlesheet to the website to let him update some content of the website without having to touch the code source, so at the end he could add new videos to the website</li>
+
+						<li class="fragment"> To be completely honest I would like to create a real back office to let him change the content of the website but as for the moment the website is hosted on a github page, I wanted to do it step by step, this is the version 1, in the version 2 I would like to make it more proffessional and having a real back office.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Challenges</h1>
+					<ul>
+						<li class="fragment">One of the biggest challenge I'm facing of, which is not fully solved at the moment is about fluidity, as there are a lot of videos in the same page, if you have an old phone the website can really be slow because all the videos are played at the same time by default. So one solution that I've implemented is to use the Intersection Observer API. With it, I was able to make a video play only if the video is visible in the viewport like that we can save a bit of resourses, as at the end maximum two or three videos are played at the same time.
+						</li>
+
+						<li class="fragment">Another challenge was, as Alex is also a 3D artist, he wanted to have a 3D model in the website which is actually logo of his company. He wanted also that the user could play with it by swiping or clicking on the shape, you can see this shape at the top-left of the page. To make this append, I decided to use BabylonJs which is a library that can brings a 3D engine in a webpage, as I'm not really into 3D, I had to learn how the library was working, but also about basic 3D things like meshes, animation, lights and textures</li>
+
+						<li class="fragment"> As I said before that was the version one, so I think one of the big challenges will be soon, when we will decide to move from a github page to something more modern, to get rid of the googlesheet and have a real back office, at the moment I've been exploring amazon web services with my last job, maybe it could be a solution I need to think about it, asking some advices to seniors developers to do the right choice.</li>
+					</ul>
+				</section>
 				
 			</div>
 		</div>
@@ -35,7 +69,8 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				width: "1920",
+  			height: "1080",
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
